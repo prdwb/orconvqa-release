@@ -4,22 +4,22 @@ This repo contains the code and data for our paper [Open-Retrieval Conversationa
 
 
 ### Data and checkpoints
-Links will be updated soon.
+Download [here](https://ciir.cs.umass.edu/downloads/ORConvQA/). The data is distributed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license. Our data enhances QuAC by adapting it to an open-retrieval setting. It is an aggregation of three existing datasets: (1) the [QuAC](http://quac.ai/) dataset that offers information-seeking conversations, (2) the [CANARD](https://sites.google.com/view/qanta/projects/canard) dataset that consists of context-independent rewrites of QuAC questions, and (3) the Wikipedia corpus that serves as the knowledge source of answering questions.
 
 OR-QuAC files:
-* [OR-QuAC dev/test files in QuAC format](). This is used in evaluation with the QuAC evaluation script.
-* [Preprocessed OR-QuAC train/dev/test files](). Model input. Each line is an example. The `evidence` field is not used for concurrent learning. Only the positive passage in `evidence` is used for retriever pretraining. Other passages are retrieved by TF-IDF. In dev/test, there might be no gold passages in this field.
-* [qrels.txt](). Passage relevance derived from QuAC. Note this is partial relevance since passages beyond the gold ones may also contain answers.
-* [all_blocks.txt](). This file has all passages in the collection.
+* OR-QuAC dev/test files in QuAC format. This is used in evaluation with the QuAC evaluation script.
+* Preprocessed OR-QuAC train/dev/test files. Model input. Each line is an example. The `evidence` field is not used for concurrent learning. Only the positive passage in `evidence` is used for retriever pretraining. Other passages are retrieved by TF-IDF. In dev/test, there might be no gold passages in this field.
+* qrels.txt. Passage relevance derived from QuAC. Note this is partial relevance since passages beyond the gold ones may also contain answers.
+* all_blocks.txt. This file has all passages in the collection.
 
 If you would like to use our pretrained retriever, also download:
-* [passage_reps.pkl](). This contains all passage representations.
-* [passage_ids.pkl](). This contains passage ids for passage reps.
-* [pretrained retriever](). The retriever checkpoint used in concurrent learning.
+* passage_reps.pkl. This contains all passage representations.
+* passage_ids.pkl. This contains passage ids for passage reps.
+* pretrained retriever. The retriever checkpoint used in concurrent learning.
 
 Optional
-* [dev_blocks.txt](). This is a small collection for selecting the best retriever model if you want to train your own retriever. You can also build your own small collection.
-* [pipeline checkpoint](). This is not necessary to download if you want to train your own model.
+* dev_blocks.txt. This is a small collection for selecting the best retriever model if you want to train your own retriever. You can also build your own small collection.
+* pipeline checkpoint. This is not necessary to download if you want to train your own model.
 
 
 ### Concurrent learning of the full model
