@@ -1,6 +1,6 @@
 # Open-Retrieval Conversational Question Answering
 
-This repo contains the code and data for our paper [Open-Retrieval Conversational Question Answering]().
+This repo contains the code and data for our paper [Open-Retrieval Conversational Question Answering](https://arxiv.org/pdf/2005.11364.pdf).
 
 
 ### Data and checkpoints
